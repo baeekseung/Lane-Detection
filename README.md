@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 ### 3. Model download
 You can download the pre-trained U-Net model from the following link:  
-**[Download UNet Model (Google Drive)](https://your-download-link.com)**  
+**[Download UNet Model (Google Drive)](https://drive.google.com/file/d/1rROuXDTVJ7fodC_6Lskzqee2alBz-iIM/view?usp=sharing)**  
   
 After downloading, place the model file (e.g., unet_road_seg.pth) in the following path:  
 👉 **Real-Time_Lane-Detection/weights/unet_road_seg.pth**
