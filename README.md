@@ -18,11 +18,27 @@ The system supports real-time road segmentation by applying a trained U-Net mode
 git clone https://github.com/baeekseung/Real-Time_Lane-Detection.git
 cd Real-Time_Lane-Detection
 ```
-
-
-
-
-
+### 2. Install dependencies
 > [!Note]
-> Table의 pre-training, fine-tuning은 본 프로젝트에서 실행한 학습을 의미합니다.  
-> Base model들은 이미 이전에 pre-training/fine-tuning을 거친 모델들로 본 프로젝트에서는 transfer learning 하였습니다.
+> `torch` and `torchvision` are intentionally excluded from `requirements.txt`.
+> Please install them manually based on your system environment. We recommend installing the **GPU version** of PyTorch for better performance.
+```bash
+pip install -r requirements.txt
+```
+### 3. Model download
+You can download the pre-trained U-Net model from the following link:  
+**[Download UNet Model (Google Drive)](https://your-download-link.com)**  
+  
+After downloading, place the model file (e.g., unet_road_seg.pth) in the following path:  
+👉 **Real-Time_Lane-Detection/weights/unet_road_seg.pth**
+
+### 4. Test
+To verify that the installation was successful, run the following command:  
+```bash
+python predict.py
+```
+If everything is set up correctly, this will load the model and perform lane segmentation on a sample image.  
+
+
+
+
