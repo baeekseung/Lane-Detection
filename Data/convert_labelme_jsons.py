@@ -44,4 +44,4 @@ def convert_all_jsons_to_masks(json_dir="resized_frames", output_dir="masks"):
 
 
 if __name__ == "__main__":
-    convert_all_jsons_to_masks("resized_frames", "masks")
+    convert_all_jsons_to_masks("jsons", "masks")

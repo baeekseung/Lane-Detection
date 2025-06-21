@@ -1,9 +1,10 @@
-# dataset.py
 from torch.utils.data import Dataset
 from torchvision import transforms
 from PIL import Image
 import os
 import torch
+
+torch.set_printoptions(profile="full")
 
 
 class RoadSegDataset(Dataset):
@@ -17,11 +18,10 @@ class RoadSegDataset(Dataset):
 
     def __getitem__(self, idx):
         image = Image.open(self.image_paths[idx]).convert("RGB")
-        mask = Image.open(self.mask_paths[idx]).convert("L")  # 흑백 (0 또는 255)
+        mask = Image.open(self.mask_paths[idx]).convert("L")
 
         # 기본 변환 (Tensor + Resize)
         transform = transforms.Compose([
-            transforms.Resize((512, 512)),
             transforms.ToTensor()
         ])
 
@@ -29,6 +29,7 @@ class RoadSegDataset(Dataset):
         mask = transform(mask)
 
         # 마스크를 0과 1로 정규화 (255 → 1)
+        mask = mask / 255.0
         mask = (mask > 0).float()
 
         return image, mask

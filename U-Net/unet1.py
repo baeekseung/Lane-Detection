@@ -37,4 +37,4 @@ class UNet(nn.Module):
         b = self.bottleneck(self.pool2(d2))
         u2 = self.up_conv2(torch.cat([self.up2(b), d2], dim=1))
         u1 = self.up_conv1(torch.cat([self.up1(u2), d1], dim=1))
-        return torch.sigmoid(self.final(u1))  # Output: (B, 1, H, W)
+        return self.final(u1)  # Output: (B, 1, H, W)
