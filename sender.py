@@ -1,5 +1,6 @@
 from flask import Flask, Response
 import cv2
+import argparse
 
 app = Flask(__name__)
 cap = cv2.VideoCapture(0)  # 0번 웹캠
@@ -19,4 +20,9 @@ def video():
     return Response(generate(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == "__main__":
-    app.run(host='172.30.1.85', port=8000)
+    parser = argparse.ArgumentParser(description="Start webcam video stream server")
+    parser.add_argument("--host", type=str, default="0.0.0.0", help="Host IP to run the server on")
+    parser.add_argument("--port", type=int, default=8000, help="Port number to run the server on")
+    args = parser.parse_args()
+
+    app.run(host=args.host, port=args.port)
