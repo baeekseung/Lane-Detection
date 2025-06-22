@@ -5,6 +5,7 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge)
 ![Pillow](https://img.shields.io/badge/Pillow-CC66CC?style=for-the-badge)
+![Flask](https://img.shields.io/badge/Flask-808080?style=for-the-badge)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
 
 <p align="center">
