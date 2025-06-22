@@ -15,7 +15,7 @@
 ## Introduction
 This project presents a real-time lane segmentation system built using a U-Net-based deep learning model.  
 We sampled frames from YouTube driving videos and manually labeled the road areas in each frame. This process resulted in a training dataset of approximately 11,200 image–mask pairs for road segmentation. U-Net architectures were then trained on this dataset.  
-The system supports real-time road segmentation by applying a trained U-Net model to incoming video streams. It can receive live driving footage from a remote webcam via a lightweight streaming server, perform lane segmentation frame-by-frame, and display the results with minimal latency. The model's predictions are overlaid on the original frames, and the real-time FPS is displayed to monitor performance.
+The system supports real-time road segmentation by applying a trained U-Net model to incoming video streams. It can receive live driving footage from a remote webcam via a lightweight streaming server, perform lane segmentation frame-by-frame, and display the results with minimal latency. The model's predictions are overlaid on the original frames.
 
 ## Installation
 ### 1. Clone the repository
