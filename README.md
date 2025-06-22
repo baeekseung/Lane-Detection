@@ -7,6 +7,11 @@
 ![Pillow](https://img.shields.io/badge/Pillow-CC66CC?style=for-the-badge)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
 
+<p align="center">
+  <img src="demo1.gif" width="49%" />
+  <img src="demo2.gif" width="49%" />
+</p>
+
 ## Introduction
 This project presents a real-time lane segmentation system built using a U-Net-based deep learning model.  
 We sampled frames from YouTube driving videos and manually labeled the road areas in each frame. This process resulted in a training dataset of approximately 11,200 image–mask pairs for road segmentation. U-Net architectures were then trained on this dataset.  
